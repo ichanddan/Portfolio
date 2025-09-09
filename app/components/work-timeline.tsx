@@ -3,27 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 export default function WorkTimeline() {
   const experiences = [
     {
-      company: "Ditinex",
-      roles: [
-        {
-          title: "Generative AI Engineer",
-          period: "November 2024 - Present",
-          description: [
-            "Led the development of AI-powered applications using Django and React",
-            "Integrated cutting-edge generative AI models, boosting user engagement by 30%",
-            "Optimized AI model deployment and API performance",
-            "Collaborated with cross-functional teams to deliver scalable solutions",
-            "Implemented robust error handling and monitoring systems",
-          ],
-        },
-      ],
-    },
-    {
       company: "Aasa Technology",
       roles: [
         {
           title: "Full Stack Developer",
-          period: "March 2024 - November 2024",
+          period: "Jan 2024 - Present",
           description: [
             "Architected and developed full-stack applications using MERN stack",
             "Improved system performance by 40% through optimization techniques",
@@ -35,11 +19,11 @@ export default function WorkTimeline() {
       ],
     },
     {
-      company: "Ditinex",
+      company: "Daps Software",
       roles: [
         {
-          title: "Associate Software Engineer",
-          period: "June 2023 - November 2023",
+          title: "Full Stack Developer",
+          period: "May 2024 - Jan 2024",
           description: [
             "Developed and maintained MERN stack applications",
             "Increased user engagement by 30% through UI/UX improvements",
@@ -49,7 +33,7 @@ export default function WorkTimeline() {
         },
         {
           title: "Frontend Developer",
-          period: "April 2023 - June 2023",
+          period: "Feb 2024 - May 2024",
           description: [
             "Built responsive user interfaces using React.js and Tailwind CSS",
             "Improved page load times by 10% through optimization",

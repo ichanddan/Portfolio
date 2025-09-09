@@ -7,7 +7,7 @@ export default function WorkTimeline() {
       roles: [
         {
           title: "Full Stack Developer",
-          period: "Jan 2024 - Present",
+          period: "Jan 2025 - Present",
           description: [
             "Architected and developed full-stack applications using MERN stack",
             "Improved system performance by 40% through optimization techniques",
@@ -23,7 +23,7 @@ export default function WorkTimeline() {
       roles: [
         {
           title: "Full Stack Developer",
-          period: "May 2024 - Jan 2024",
+          period: "May 2024 - Jan 2025",
           description: [
             "Developed and maintained MERN stack applications",
             "Increased user engagement by 30% through UI/UX improvements",

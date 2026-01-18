@@ -109,7 +109,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="relative w-48 h-48 rounded-full overflow-hidden shrink-0">
+          {/* <div className="relative w-48 h-48 rounded-full overflow-hidden shrink-0">
             {            // eslint-disable-next-line @next/next/no-img-element
             }            <img
               src="https://media.licdn.com/dms/image/v2/D5603AQFT3-6ZLcJklA/profile-displayphoto-shrink_800_800/B56Zd0t4IUG0Ac-/0/1750009876246?e=1760572800&v=beta&t=kjYN2V3xyEaoqIM6kYpLYzkmo03JImHGASyBZcqCaPM"
@@ -118,7 +118,7 @@ export default function Home() {
               width={192}
               height={192}
             />
-          </div>
+          </div> */}
         </section>
 
         <section id="skills" className="mb-20">

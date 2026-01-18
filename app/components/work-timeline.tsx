@@ -3,11 +3,25 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 export default function WorkTimeline() {
   const experiences = [
     {
+      company: "AiQwip",
+      roles: [
+        {
+          title: "Software Engineer",
+          period: "Dec 2025 - Now",
+          description: [
+            "Implemented advanced state management with Redux and Context API",
+            "Led code reviews and mentored junior developers",
+            "Integrated third-party APIs and services to expand functionality",
+          ],
+        },
+      ],
+    },
+    {
       company: "Aasa Technology",
       roles: [
         {
-          title: "Full Stack Developer",
-          period: "Jan 2025 - Present",
+          title: "Junior Full Stack Developer",
+          period: "Dec 2024 - Dec 2025",
           description: [
             "Architected and developed full-stack applications using MERN stack",
             "Improved system performance by 40% through optimization techniques",
@@ -22,8 +36,8 @@ export default function WorkTimeline() {
       company: "Daps Software",
       roles: [
         {
-          title: "Full Stack Developer",
-          period: "May 2024 - Jan 2025",
+          title: "Frontend Developer",
+          period: "May 2024 - 16 Dec 2025",
           description: [
             "Developed and maintained MERN stack applications",
             "Increased user engagement by 30% through UI/UX improvements",
@@ -32,7 +46,7 @@ export default function WorkTimeline() {
           ],
         },
         {
-          title: "Frontend Developer",
+          title: "Frontend Developer Intern",
           period: "Feb 2024 - May 2024",
           description: [
             "Built responsive user interfaces using React.js and Tailwind CSS",

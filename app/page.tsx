@@ -47,6 +47,12 @@ export default function Home() {
               Skills
             </button>
             <button
+              onClick={() => scrollToSection("experience")}
+              className="text-sm font-medium hover:text-primary"
+            >
+              Experience
+            </button>
+            <button
               onClick={() => scrollToSection("projects")}
               className="text-sm font-medium hover:text-primary"
             >
@@ -74,51 +80,60 @@ export default function Home() {
       </header>
 
       <main className="max-w-[768px] mx-auto px-4 py-12">
-        <section
-          id="home"
-          className="flex flex-col md:flex-row items-start justify-between gap-12 mb-20"
-        >
+        <section id="home" className="flex flex-col gap-8 mb-20">
           <div>
-            <h1 className="text-4xl font-bold mb-4">
-              Hi chandan here <WavingHand />
-            </h1>
-            <p className="text-lg text-muted-foreground mb-6 max-w-[480px]">
-              MERN Stack Developer with expertise in building dynamic, scalable, and high-performance web applications, delivering seamless user experiences through modern technologies.
+            <p className="text-sm font-medium text-muted-foreground mb-2 tracking-wide uppercase">
+              Software Engineer · Full Stack Developer
             </p>
-            <div className="flex gap-4">
+            <h1 className="text-4xl font-bold mb-4">
+              Hi, I&apos;m Chandan <WavingHand />
+            </h1>
+            <p className="text-base text-muted-foreground mb-6 max-w-[560px] leading-relaxed">
+              Results-driven Software Engineer with 2+ years of experience building scalable web and
+              mobile applications using the MERN stack, TypeScript, Next.js, and React Native.
+              Focused on clean architecture, performant UIs, and collaborative agile delivery.
+            </p>
+            <div className="flex flex-wrap gap-3">
               <Button asChild variant="outline">
                 <Link href="https://github.com/ichanddan" target="_blank">
                   <Github className="mr-2 h-4 w-4" />
-                  Github
+                  GitHub
                 </Link>
               </Button>
               <Button asChild variant="outline">
-                <Link
-                  href="https://www.linkedin.com/in/ichanddan"
-                  target="_blank"
-                >
+                <Link href="https://www.linkedin.com/in/ichanddan" target="_blank">
                   <Linkedin className="mr-2 h-4 w-4" />
                   LinkedIn
                 </Link>
               </Button>
               <Button asChild variant="outline">
-                <Link href="mailto:code.use.cm@gmail.com">
+                <Link href="mailto:code.us.cm@gmail.com">
                   <Mail className="mr-2 h-4 w-4" />
                   Email
                 </Link>
               </Button>
+              <Button asChild>
+                <Link href="/Chandan_Kumar_Maurya_Resume.pdf" target="_blank" download>
+                  Download CV
+                </Link>
+              </Button>
             </div>
           </div>
-          {/* <div className="relative w-48 h-48 rounded-full overflow-hidden shrink-0">
-            {            // eslint-disable-next-line @next/next/no-img-element
-            }            <img
-              src="https://media.licdn.com/dms/image/v2/D5603AQFT3-6ZLcJklA/profile-displayphoto-shrink_800_800/B56Zd0t4IUG0Ac-/0/1750009876246?e=1760572800&v=beta&t=kjYN2V3xyEaoqIM6kYpLYzkmo03JImHGASyBZcqCaPM"
-              alt="Profile"
-              className="object-cover"
-              width={192}
-              height={192}
-            />
-          </div> */}
+
+          <div className="flex flex-wrap gap-6 pt-4 border-t">
+            <div>
+              <p className="text-2xl font-bold">2+</p>
+              <p className="text-sm text-muted-foreground">Years experience</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold">8+</p>
+              <p className="text-sm text-muted-foreground">Projects shipped</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold">10k+</p>
+              <p className="text-sm text-muted-foreground">Users served</p>
+            </div>
+          </div>
         </section>
 
         <section id="skills" className="mb-20">
@@ -126,7 +141,8 @@ export default function Home() {
           <SkillsSection />
         </section>
 
-        <section className="mb-20">
+        <section id="experience" className="mb-20">
+          <h2 className="text-2xl font-bold mb-8">Experience</h2>
           <Tabs defaultValue="work" className="w-full">
             <TabsList className="grid w-full grid-cols-2 mb-8">
               <TabsTrigger value="work">Work</TabsTrigger>
@@ -151,14 +167,20 @@ export default function Home() {
 
             <TabsContent value="personal" className="space-y-6">
               <ProjectCard
+                title="eSportsPedia"
+                description="Full-stack esports wiki platform covering Indian gaming — player profiles, team pages, tournaments, and news articles. SEO-optimized with Next.js SSR/SSG and Server Actions for backend logic, eliminating a separate API layer."
+                link="https://esportspedia.org"
+                technologies={["TypeScript", "Next.js", "Tailwind", "Shadcn UI"]}
+              />
+              <ProjectCard
                 title="Dummy API"
-                description="Revolutionize your development workflow with our customizable dummy API. Sign up, create projects, define endpoints, configure data, and test seamlessly all in one platform."
+                description="Customizable dummy API platform — sign up, create projects, define endpoints, configure response data, and test seamlessly all in one place."
                 link="https://dmy-api.vercel.app/"
                 technologies={["TypeScript", "Next.js", "MongoDB", "Tailwind"]}
               />
               <ProjectCard
                 title="URL Shortener"
-                description="A modern URL shortener service that allows users to create concise and shareable links. Built with performance and user experience in mind."
+                description="Modern URL shortener that lets users create concise, shareable links. Built with performance and user experience in mind."
                 link="https://ijkl.vercel.app/"
                 technologies={["TypeScript", "Next.js", "Vercel", "Tailwind"]}
               />
@@ -166,51 +188,35 @@ export default function Home() {
 
             <TabsContent value="organizational" className="space-y-6">
               <ProjectCard
-                title="Nutri Value"
-                description="It is nutrition based application , real-time track nutation and planing food dairy date wage."
-                technologies={["React Native", "React", "Node", "Express", "Prisma ORM"]}
+                title="School Spares"
+                description="Full-stack e-commerce platform with secure JWT authentication, RESTful APIs, and role-based access control for admin and customer workflows. Optimized MongoDB queries reduced average API response time by ~35%."
+                technologies={["React", "Node", "Express", "MongoDB", "Ant Design", "Prisma ORM"]}
                 organization="Aasa Technology"
               />
               <ProjectCard
-                title="Sham Rock india"
-                description="Lead generation admin panel to track all live leads from applications, initiate forms, and enable real-time chat between admins and enquired users."
+                title="ShamRock India"
+                description="Lead-generation admin dashboard with modular, component-based widgets, drag-and-drop layouts, and real-time notifications via WebSocket for live data streams and operational visibility."
                 link="https://keyshell.net/"
-                technologies={["React", "WebSocket", "Node", "Express", "MySQL", "Prisma ORM"]}
-                organization="Aasa Technology"
-              />
-
-              <ProjectCard
-                title="School Sphere"
-                description="A school management platform that enables parents and teacher track student performance, as well as attendance."
-                link="https://sphere-school-admin.in1.apiqcloud.com/"
-                technologies={["React", "Tailwind", "Node", "Express", "Prisma ORM"]}
-                organization="Aasa Technology"
-              />
-
-              <ProjectCard
-                title="Remedies Pharma"
-                description="E-commerce-like platform specialized for medicine with advanced search and listing features."
-                technologies={["Next.js", 'Tailwind', "Prisma ORM", "Mysql"]}
+                technologies={["React", "Node", "Express", "MySQL", "Ant Design", "WebSocket", "Prisma ORM"]}
                 organization="Aasa Technology"
               />
               <ProjectCard
-                title="Infinity Motors"
-                description="Comprehensive vehicle and finance management platform with features for inventory tracking, customer management, and financial operations."
-                technologies={["React", "Tailwind", "Node", "Express", "Sequelize ORM", "MySQL"]}
-                organization="Daps Software"
+                title="Nutri Value"
+                description="Cross-platform nutrition tracking app (iOS, Android, Web) with secure authentication, REST APIs, offline support, and daily analytics for goal tracking. Seamless sync between mobile and web via Prisma ORM and MySQL."
+                technologies={["React Native", "Node", "Express", "MySQL", "Prisma ORM"]}
+                organization="Aasa Technology"
               />
-
             </TabsContent>
           </Tabs>
         </section>
         <section id="contact" className="mb-20">
-          <h2 className="text-2xl font-bold mb-8">get in touch</h2>
+          <h2 className="text-2xl font-bold mb-8">Get in touch</h2>
           <p className="text-lg text-muted-foreground mb-6">
             I&apos;m always interested in hearing about new projects and
             opportunities.
           </p>
           <Button asChild>
-            <Link href="mailto:code.use.cm@gmail.com">Send me an email</Link>
+            <Link href="mailto:code.us.cm@gmail.com">Send me an email</Link>
           </Button>
         </section>
       </main>

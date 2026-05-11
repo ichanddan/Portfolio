@@ -5,34 +5,34 @@ export default function EducationTimeline() {
     {
       school: "Manipal University Jaipur",
       degree: "Master of Computer Applications (MCA)",
-      field: "Computer Software and Media Applications",
-      period: "2023 - 2025",
+      field: "Distance Learning",
+      period: "2023 – 2025",
+      grade: "SGPA: 9.57 / 10",
       description: [
-        "Specialized in advanced software development and system design",
-        "Completed projects in web development and database management",
+        "Specialized in advanced software development, system design, and database management.",
+        "Completed full-stack development projects applying modern software engineering principles.",
       ],
     },
     {
-      school: "National Institute of Electronics & Information Technology",
-      degree: "O Level",
-      field: "Computer Software and Media Applications",
-      period: "2022 - 2023",
-      description: [
-        "Gained strong foundation in software development and system design concepts",
-        "Completed academic and practical projects in web development",
-        "Consistently maintained excellent academic performance during O Level program",
-      ],
-    },
-    {
-      school: "Mahatma Gandhi Kashi Vidyapeeth",
-      degree: "Bachelor's degree",
+      school: "Mahatma Gandhi Kashi Vidyapith University",
+      degree: "Bachelor of Computer Applications (BCA)",
       field: "Computer Science",
-      period: "July 2018 - July 2021",
+      period: "2018 – 2021",
+      grade: "Percentage: 61%",
       description: [
-        "Focused on core computer science fundamentals",
-        "Developed strong problem-solving and analytical skills",
-        "Completed various programming projects",
-        "Active member of the computer science society",
+        "Built a strong foundation in core computer science concepts, algorithms, and programming.",
+        "Gained hands-on experience with web development and relational databases.",
+      ],
+    },
+    {
+      school: "National Institute of Electronics & Information Technology (NIELIT)",
+      degree: "O Level Certification",
+      field: "Computer Software & Media Applications",
+      period: "2021 – 2023",
+      grade: "Grade: A+",
+      description: [
+        "Completed government-certified IT program covering programming, networking, and web development.",
+        "Maintained excellent academic performance throughout the program.",
       ],
     },
   ]
@@ -42,15 +42,22 @@ export default function EducationTimeline() {
       {education.map((edu, index) => (
         <Card key={index}>
           <CardHeader>
-            <CardTitle>{edu.school}</CardTitle>
-            <p className="text-lg font-semibold text-primary">{edu.degree}</p>
-            <p className="text-sm text-muted-foreground">{edu.field}</p>
+            <CardTitle className="text-base">{edu.school}</CardTitle>
+            <p className="text-sm font-semibold text-primary">{edu.degree}</p>
+            <div className="flex items-center justify-between flex-wrap gap-2">
+              <p className="text-sm text-muted-foreground">{edu.field} · {edu.period}</p>
+              <span className="text-xs font-medium bg-secondary text-secondary-foreground px-2 py-0.5 rounded-full">
+                {edu.grade}
+              </span>
+            </div>
           </CardHeader>
           <CardContent>
-            <p className="text-sm font-medium mb-2">{edu.period}</p>
-            <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+            <ul className="space-y-1.5 text-sm text-muted-foreground">
               {edu.description.map((item, i) => (
-                <li key={i}>{item}</li>
+                <li key={i} className="flex gap-2">
+                  <span className="mt-1.5 shrink-0 w-1 h-1 rounded-full bg-muted-foreground/60" />
+                  {item}
+                </li>
               ))}
             </ul>
           </CardContent>
@@ -59,4 +66,3 @@ export default function EducationTimeline() {
     </div>
   )
 }
-

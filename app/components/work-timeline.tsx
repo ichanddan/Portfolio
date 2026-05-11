@@ -3,56 +3,59 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 export default function WorkTimeline() {
   const experiences = [
     {
-      company: "AiQwip",
+      company: "Aiqwip Technology Pvt. Ltd.",
+      location: "Bangalore, India",
       roles: [
         {
           title: "Software Engineer",
-          period: "Dec 2025 - Now",
+          period: "December 2025 – Present",
           description: [
-            "Implemented advanced state management with Redux and Context API",
-            "Led code reviews and mentored junior developers",
-            "Integrated third-party APIs and services to expand functionality",
+            "Design, develop, and maintain scalable full-stack web applications using Next.js, TypeScript, Node.js, and Express.js, contributing to the company's core product roadmap.",
+            "Build secure RESTful APIs and backend services integrated with MongoDB and MySQL, ensuring high availability, data integrity, and optimal query performance.",
+            "Implement reusable, responsive UI components with Tailwind CSS and Shadcn UI, improving development velocity and maintaining a consistent design system.",
+            "Collaborate with product managers, designers, and QA engineers in an agile environment to deliver features through sprint-based release cycles.",
+            "Participate in code reviews, write unit tests, and apply software engineering best practices to improve code quality and reduce production defects.",
           ],
         },
       ],
     },
     {
       company: "Aasa Technology",
+      location: "Remote",
       roles: [
         {
-          title: "Junior Full Stack Developer",
-          period: "Dec 2024 - Dec 2025",
+          title: "Full Stack Developer",
+          period: "January 2025 – December 2025",
           description: [
-            "Architected and developed full-stack applications using MERN stack",
-            "Improved system performance by 40% through optimization techniques",
-            "Implemented advanced state management with Redux and Context API",
-            "Led code reviews and mentored junior developers",
-            "Integrated third-party APIs and services to expand functionality",
+            "Designed and implemented secure, scalable RESTful APIs using Node.js and Express.js, enabling seamless frontend-backend communication for 10,000+ active users.",
+            "Developed reusable, performant UI components with React.js and TypeScript, cutting component development time by ~30% and ensuring consistent design system adoption.",
+            "Reduced page load times by ~40% by optimizing rendering, implementing lazy loading, and refactoring critical React components.",
+            "Resolved high-priority production bugs, improving checkout conversion and overall application reliability for thousands of end users.",
           ],
         },
       ],
     },
     {
       company: "Daps Software",
+      location: "Remote",
       roles: [
         {
-          title: "Frontend Developer",
-          period: "May 2024 - 16 Dec 2025",
+          title: "Full Stack Developer",
+          period: "May 2024 – January 2025",
           description: [
-            "Developed and maintained MERN stack applications",
-            "Increased user engagement by 30% through UI/UX improvements",
-            "Collaborated with design team to implement pixel-perfect interfaces",
-            "Participated in Agile ceremonies and sprint planning",
+            "Engineered end-to-end web solutions using the MERN stack (MongoDB, Express.js, React.js, Node.js), delivering 5+ production-ready modules on schedule.",
+            "Partnered with cross-functional teams to architect and implement scalable backend services, supporting a 25% increase in platform traffic without degradation.",
+            "Integrated third-party REST APIs and payment/auth services (JWT, OAuth) to expand product capabilities and shorten feature delivery cycles.",
+            "Authored unit and integration tests, enforced ESLint/Prettier standards, and participated in peer code reviews to maintain high code quality.",
           ],
         },
         {
-          title: "Frontend Developer Intern",
-          period: "Feb 2024 - May 2024",
+          title: "Frontend Developer",
+          period: "February 2024 – May 2024",
           description: [
-            "Built responsive user interfaces using React.js and Tailwind CSS",
-            "Improved page load times by 10% through optimization",
-            "Collaborated with backend team for API integration",
-            "Created reusable component libraries",
+            "Translated Figma wireframes into pixel-perfect, production-grade interfaces using HTML5, CSS3, and JavaScript.",
+            "Built fully responsive, cross-browser UIs optimized for mobile, tablet, and desktop, reaching a Lighthouse accessibility score of 90+.",
+            "Integrated frontend components with backend REST APIs, partnering with server-side engineers to ensure end-to-end functionality and data integrity.",
           ],
         },
       ],
@@ -65,17 +68,21 @@ export default function WorkTimeline() {
         <Card key={index}>
           <CardHeader>
             <CardTitle>{exp.company}</CardTitle>
+            <p className="text-sm text-muted-foreground">{exp.location}</p>
           </CardHeader>
           <CardContent>
             <div className="relative border-l border-muted-foreground/20 pl-6 ml-2">
               {exp.roles.map((role, roleIndex) => (
-                <div key={roleIndex} className="mb-8 last:mb-0">
-                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] mt-1.5"></div>
-                  <h3 className="text-lg font-semibold">{role.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-2">{role.period}</p>
-                  <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                <div key={roleIndex} className="mb-8 last:mb-0 relative">
+                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[31px] top-1.5" />
+                  <h3 className="text-base font-semibold">{role.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">{role.period}</p>
+                  <ul className="space-y-1.5 text-sm text-muted-foreground">
                     {role.description.map((item, i) => (
-                      <li key={i}>{item}</li>
+                      <li key={i} className="flex gap-2">
+                        <span className="mt-1.5 shrink-0 w-1 h-1 rounded-full bg-muted-foreground/60" />
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -87,4 +94,3 @@ export default function WorkTimeline() {
     </div>
   )
 }
-

@@ -40,13 +40,16 @@ export default function EducationTimeline() {
   return (
     <div className="space-y-6">
       {education.map((edu, index) => (
-        <Card key={index}>
+        <Card
+          key={index}
+          className="transition-all duration-200 hover:shadow-md hover:shadow-indigo-100 dark:hover:shadow-indigo-900/30 hover:border-indigo-200 dark:hover:border-indigo-800"
+        >
           <CardHeader>
             <CardTitle className="text-base">{edu.school}</CardTitle>
             <p className="text-sm font-semibold text-primary">{edu.degree}</p>
             <div className="flex items-center justify-between flex-wrap gap-2">
               <p className="text-sm text-muted-foreground">{edu.field} · {edu.period}</p>
-              <span className="text-xs font-medium bg-secondary text-secondary-foreground px-2 py-0.5 rounded-full">
+              <span className="text-xs font-medium bg-indigo-100 text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-300 px-2 py-0.5 rounded-full">
                 {edu.grade}
               </span>
             </div>

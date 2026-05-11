@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const skillCategories = [
@@ -57,39 +61,52 @@ const skillCategories = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.35 } },
+};
+
 export default function SkillsSection() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
   return (
-    <div className="grid gap-4 md:grid-cols-2">
+    <motion.div
+      ref={ref}
+      className="grid gap-4 md:grid-cols-2"
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
+    >
       {skillCategories.map((category, index) => (
-        <Card key={index}>
-          <CardHeader className="pb-3">
-            <CardTitle className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-              {category.name}
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-wrap gap-3">
-              {category.skills.map((skill, skillIndex) => (
-                <div
-                  key={skillIndex}
-                  className="flex items-center gap-1.5 text-sm"
-                >
-                  {skill.logo && (
-                    <Image
-                      src={skill.logo}
-                      alt={skill.name}
-                      width={16}
-                      height={16}
-                      className="shrink-0"
-                    />
-                  )}
-                  <span>{skill.name}</span>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+        <motion.div key={index} variants={cardVariants}>
+          <Card className="h-full transition-all duration-200 hover:shadow-md hover:shadow-indigo-100 dark:hover:shadow-indigo-900/30 hover:border-indigo-200 dark:hover:border-indigo-800">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-sm font-semibold uppercase tracking-wider bg-gradient-to-r from-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+                {category.name}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-3">
+                {category.skills.map((skill, skillIndex) => (
+                  <div key={skillIndex} className="flex items-center gap-1.5 text-sm">
+                    {skill.logo && (
+                      <Image
+                        src={skill.logo}
+                        alt={skill.name}
+                        width={16}
+                        height={16}
+                        className="shrink-0"
+                      />
+                    )}
+                    <span>{skill.name}</span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }

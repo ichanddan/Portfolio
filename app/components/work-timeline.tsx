@@ -13,7 +13,7 @@ export default function WorkTimeline() {
             "Design, develop, and maintain scalable full-stack web applications using Next.js, TypeScript, Node.js, and Express.js, contributing to the company's core product roadmap.",
             "Build secure RESTful APIs and backend services integrated with MongoDB and MySQL, ensuring high availability, data integrity, and optimal query performance.",
             "Implement reusable, responsive UI components with Tailwind CSS and Shadcn UI, improving development velocity and maintaining a consistent design system.",
-            "Collaborate with product managers, designers, and QA engineers in an agile environment to deliver features through sprint-based release cycles.",
+            "Led frontend development on Imeld AI for 5 months before transitioning to full stack ownership; platform successfully passed VAPT (Vulnerability Assessment & Penetration Testing) and is currently undergoing SOC2 certification.",
             "Participate in code reviews, write unit tests, and apply software engineering best practices to improve code quality and reduce production defects.",
           ],
         },
@@ -65,7 +65,10 @@ export default function WorkTimeline() {
   return (
     <div className="space-y-6">
       {experiences.map((exp, index) => (
-        <Card key={index}>
+        <Card
+          key={index}
+          className="transition-all duration-200 hover:shadow-md hover:shadow-indigo-100 dark:hover:shadow-indigo-900/30 hover:border-indigo-200 dark:hover:border-indigo-800"
+        >
           <CardHeader>
             <CardTitle>{exp.company}</CardTitle>
             <p className="text-sm text-muted-foreground">{exp.location}</p>
@@ -74,7 +77,7 @@ export default function WorkTimeline() {
             <div className="relative border-l border-muted-foreground/20 pl-6 ml-2">
               {exp.roles.map((role, roleIndex) => (
                 <div key={roleIndex} className="mb-8 last:mb-0 relative">
-                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[31px] top-1.5" />
+                  <div className="absolute w-3 h-3 rounded-full -left-[31px] top-1.5 bg-gradient-to-b from-indigo-600 to-cyan-500" />
                   <h3 className="text-base font-semibold">{role.title}</h3>
                   <p className="text-sm text-muted-foreground mb-3">{role.period}</p>
                   <ul className="space-y-1.5 text-sm text-muted-foreground">

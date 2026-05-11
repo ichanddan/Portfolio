@@ -13,6 +13,7 @@ interface ProjectCardProps {
   link?: string
   technologies: string[]
   organization?: string
+  index?: number
 }
 
 const techLogos: { [key: string]: string } = {
@@ -40,10 +41,21 @@ const techLogos: { [key: string]: string } = {
   "API Integration": "/logos/api.svg",
 }
 
-export default function ProjectCard({ title, description, link, technologies, organization }: ProjectCardProps) {
+export default function ProjectCard({
+  title,
+  description,
+  link,
+  technologies,
+  organization,
+  index = 0,
+}: ProjectCardProps) {
   return (
-    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
-      <Card className="group hover:shadow-lg transition-all duration-300">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, delay: index * 0.1 }}
+    >
+      <Card className="group transition-all duration-300 hover:shadow-lg hover:shadow-indigo-100 dark:hover:shadow-indigo-900/30 hover:border-indigo-200 dark:hover:border-indigo-800">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>{title}</span>
@@ -55,11 +67,13 @@ export default function ProjectCard({ title, description, link, technologies, or
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-muted-foreground mb-4">{description}</p>
+          <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{description}</p>
 
           {organization && (
             <p className="text-sm font-medium mb-4">
-              <span className="text-primary">Organization:</span> {organization}
+              <span className="bg-gradient-to-r from-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+                {organization}
+              </span>
             </p>
           )}
 
@@ -73,11 +87,11 @@ export default function ProjectCard({ title, description, link, technologies, or
                 <Badge variant="secondary" className="flex items-center gap-1">
                   {techLogos[tech] && (
                     <Image
-                      src={techLogos[tech] || "/placeholder.svg"}
+                      src={techLogos[tech]}
                       alt={tech}
-                      width={16}
-                      height={16}
-                      className="dark:invert-[.25]"
+                      width={14}
+                      height={14}
+                      className="dark:invert-[.25] shrink-0"
                     />
                   )}
                   {tech}
@@ -90,4 +104,3 @@ export default function ProjectCard({ title, description, link, technologies, or
     </motion.div>
   )
 }
-

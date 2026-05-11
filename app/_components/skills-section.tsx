@@ -14,7 +14,7 @@ const skillCategories = [
       { name: "Next.js", logo: "/logos/nextjs.svg" },
       { name: "TypeScript", logo: "/logos/typescript.svg" },
       { name: "Tailwind CSS", logo: "/logos/tailwind.svg" },
-      { name: "Redux Toolkit", logo: null },
+      { name: "Redux Toolkit", logo: "/logos/react.svg" },
     ],
   },
   {
@@ -22,16 +22,19 @@ const skillCategories = [
     skills: [
       { name: "Node.js", logo: "/logos/nodejs.svg" },
       { name: "Express.js", logo: "/logos/express.svg" },
+      { name: "FastAPI", logo: "/logos/fastapi.svg" },
       { name: "Prisma ORM", logo: "/logos/prisma.svg" },
+      { name: "WebSocket", logo: "/logos/websocket.svg" },
       { name: "JWT Auth", logo: null },
-      { name: "WebSocket", logo: null },
     ],
   },
   {
     name: "Database",
     skills: [
       { name: "MongoDB", logo: "/logos/mongodb.svg" },
+      { name: "PostgreSQL", logo: "/logos/postgresql.svg" },
       { name: "MySQL", logo: "/logos/mysql.svg" },
+      { name: "Redis", logo: "/logos/redis.svg" },
       { name: "Mongoose", logo: "/logos/mongodb.svg" },
     ],
   },
@@ -40,6 +43,15 @@ const skillCategories = [
     skills: [
       { name: "React Native", logo: "/logos/react.svg" },
       { name: "Expo", logo: "/logos/expo.svg" },
+    ],
+  },
+  {
+    name: "AI & Cloud",
+    skills: [
+      { name: "Azure OpenAI", logo: "/logos/azure.svg" },
+      { name: "Google Gemini", logo: "/logos/Google_Gemini_logo.svg" },
+      { name: "OpenAI", logo: "/logos/OpenAI_Logo.svg" },
+      { name: "Python", logo: "/logos/python.svg" },
     ],
   },
   {
@@ -53,11 +65,11 @@ const skillCategories = [
   {
     name: "DevOps & Tools",
     skills: [
-      { name: "Git / GitHub", logo: null },
+      { name: "Git / GitHub", logo: "/logos/github.svg" },
       { name: "Vercel", logo: "/logos/vercel.svg" },
-      { name: "Postman", logo: null },
-      { name: "Figma", logo: null },
-      { name: "JIRA", logo: null },
+      { name: "Postman", logo: "/logos/postman.svg" },
+      { name: "Figma", logo: "/logos/figma.svg" },
+      { name: "JIRA", logo: "/logos/jira.svg" },
     ],
   },
 ];
@@ -100,7 +112,7 @@ export default function SkillsSection() {
                             alt={skill.name}
                             width={16}
                             height={16}
-                            className="shrink-0"
+                            className="shrink-0 dark:invert"
                           />
                         )}
                         <span>{skill.name}</span>

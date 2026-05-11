@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\chand\\\\OneDrive\\\\Desktop\\\\Portfolio\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(git *)",
+      "Bash(bun run *)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\chand\\\\OneDrive\\\\Desktop\\\\Portfolio\\\\app\\\\components\\\\skills-section.tsx\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\chand\\\\OneDrive\\\\Desktop\\\\Portfolio\\\\app\\\\components\\\\work-timeline.tsx\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\chand\\\\OneDrive\\\\Desktop\\\\Portfolio\\\\app\\\\components\\\\education-timeline.tsx\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\chand\\\\OneDrive\\\\Desktop\\\\Portfolio\\\\app\\\\components\\\\project-card.tsx\" -Force)",
+      "Bash(Write-Output \"Deleted old component files\")",
+      "WebFetch(domain:cdn.simpleicons.org)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\chand\\\\OneDrive\\\\Desktop\\\\Portfolio\\\\public\\\\logos\" | Where-Object { $_.Name -in @\\(\"fastapi.svg\",\"redis.svg\",\"azure.svg\",\"websocket.svg\",\"github.svg\",\"postman.svg\",\"figma.svg\",\"jira.svg\"\\) } | Select-Object Name, Length, LastWriteTime | Format-Table -AutoSize)",
+      "WebFetch(domain:www.better-auth.com)",
+      "WebFetch(domain:better-auth.com)",
+      "WebFetch(domain:avatars.githubusercontent.com)",
+      "Bash(curl -L \"https://avatars.githubusercontent.com/u/158000925?s=200&v=4\" -o \"C:\\\\Users\\\\chand\\\\OneDrive\\\\Desktop\\\\Portfolio\\\\public\\\\logos\\\\better-auth.png\" --silent --show-error)",
+      "Bash(python3 -c ' *)",
+      "WebFetch(domain:raw.githubusercontent.com)"
+    ]
+  }
+}

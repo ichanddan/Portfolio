@@ -1,11 +1,35 @@
 "use client";
 
+import { useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+
+function useTilt() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = ref.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    el.style.transform = `perspective(800px) rotateY(${x * 7}deg) rotateX(${-y * 7}deg) scale3d(1.02,1.02,1.02)`;
+    el.style.transition = "transform 0.1s ease";
+  };
+
+  const onMouseLeave = () => {
+    const el = ref.current;
+    if (!el) return;
+    el.style.transform = "perspective(800px) rotateY(0deg) rotateX(0deg) scale3d(1,1,1)";
+    el.style.transition = "transform 0.4s ease";
+  };
+
+  return { ref, onMouseMove, onMouseLeave };
+}
 
 interface ProjectCardProps {
   title: string;
@@ -49,13 +73,19 @@ export default function ProjectCard({
   organization,
   index = 0,
 }: ProjectCardProps) {
+  const { ref, onMouseMove, onMouseLeave } = useTilt();
+
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.1 }}
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+      style={{ willChange: "transform" }}
     >
-      <Card className="group transition-all duration-300 hover:shadow-lg hover:shadow-indigo-100 dark:hover:shadow-indigo-900/30 hover:border-indigo-200 dark:hover:border-indigo-800">
+      <Card className="group transition-shadow duration-300 hover:shadow-lg hover:shadow-indigo-100 dark:hover:shadow-indigo-900/30 hover:border-indigo-200 dark:hover:border-indigo-800">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>{title}</span>

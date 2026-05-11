@@ -1,8 +1,9 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import WavingHand from "./waving-hand";
@@ -16,6 +17,62 @@ const stagger = {
   animate: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
 };
 
+const SUBTITLE = "Software Engineer · Full Stack Developer";
+
+function TypewriterText({ text }: { text: string }) {
+  const [displayed, setDisplayed] = useState("");
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    let i = 0;
+    const timer = setInterval(() => {
+      i++;
+      setDisplayed(text.slice(0, i));
+      if (i >= text.length) {
+        setDone(true);
+        clearInterval(timer);
+      }
+    }, 38);
+    return () => clearInterval(timer);
+  }, [text]);
+
+  return (
+    <span>
+      {displayed}
+      {!done && <span className="animate-pulse opacity-70">|</span>}
+    </span>
+  );
+}
+
+function CountUp({ end, suffix = "" }: { end: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLParagraphElement>(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!isInView) return;
+    let start = 0;
+    const duration = 1200;
+    const step = end / (duration / 16);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= end) {
+        setCount(end);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+    return () => clearInterval(timer);
+  }, [isInView, end]);
+
+  return (
+    <p ref={ref} className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+      {count}{suffix}
+    </p>
+  );
+}
+
 export default function HeroSection() {
   return (
     <section id="home" className="py-16">
@@ -27,7 +84,7 @@ export default function HeroSection() {
                 variants={fadeUp}
                 className="text-sm font-medium text-muted-foreground mb-2 tracking-wide uppercase"
               >
-                Software Engineer · Full Stack Developer
+                <TypewriterText text={SUBTITLE} />
               </motion.p>
               <motion.h1 variants={fadeUp} className="text-5xl font-bold mb-4 leading-tight">
                 Hi, I&apos;m{" "}
@@ -92,13 +149,11 @@ export default function HeroSection() {
 
           <motion.div variants={fadeUp} className="flex flex-wrap gap-8 pt-6 border-t">
             {[
-              { value: "2+", label: "Years experience" },
-              { value: "8+", label: "Projects shipped" },
+              { end: 2, suffix: "+", label: "Years experience" },
+              { end: 8, suffix: "+", label: "Projects shipped" },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-cyan-500 bg-clip-text text-transparent">
-                  {stat.value}
-                </p>
+                <CountUp end={stat.end} suffix={stat.suffix} />
                 <p className="text-sm text-muted-foreground">{stat.label}</p>
               </div>
             ))}

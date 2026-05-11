@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import FloatingNav from "./_components/floating-nav";
 import ThemeToggle from "./_components/theme-toggle";
+import ScrollProgress from "./_components/scroll-progress";
+import BackToTop from "./_components/back-to-top";
 import HeroSection from "./_components/hero-section";
 import FeaturedProject from "./_components/featured-project";
 import SkillsSection from "./_components/skills-section";
@@ -22,8 +24,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
+      <ScrollProgress />
       <FloatingNav />
       <ThemeToggle />
+      <BackToTop />
       <HeroSection />
       <FeaturedProject />
       <SkillsSection />

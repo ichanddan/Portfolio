@@ -47,15 +47,15 @@ export default function FeaturedProject() {
 
             <div className="flex flex-wrap gap-2 mb-6">
               {[
-                { name: "Next.js", logo: "/logos/nextjs.svg" },
-                { name: "Python", logo: "/logos/python.svg" },
-                { name: "FastAPI", logo: null },
-                { name: "PostgreSQL", logo: "/logos/postgresql.svg" },
-                { name: "Redis", logo: null },
-                { name: "WebSocket", logo: "/logos/javascript.svg" },
-                { name: "Azure OpenAI", logo: null },
-                { name: "Google Gemini", logo: "/logos/Google_Gemini_logo.svg" },
-                { name: "Anam.ai", logo: null },
+                { name: "Next.js", logo: "/logos/nextjs.svg", invert: true },
+                { name: "Python", logo: "/logos/python.svg", invert: false },
+                { name: "FastAPI", logo: "/logos/fastapi.svg", invert: false },
+                { name: "PostgreSQL", logo: "/logos/postgresql.svg", invert: false },
+                { name: "Redis", logo: "/logos/redis.svg", invert: true },
+                { name: "WebSocket", logo: "/logos/websocket.svg", invert: true },
+                { name: "Azure OpenAI", logo: "/logos/azure.svg", invert: true },
+                { name: "Google Gemini", logo: "/logos/Google_Gemini_logo.svg", invert: false },
+                { name: "Anam.ai", logo: null, invert: false },
               ].map((tech) => (
                 <Badge key={tech.name} variant="secondary" className="flex items-center gap-1">
                   {tech.logo && (
@@ -64,7 +64,7 @@ export default function FeaturedProject() {
                       alt={tech.name}
                       width={14}
                       height={14}
-                      className="shrink-0"
+                      className={`shrink-0${tech.invert ? " dark:invert" : ""}`}
                     />
                   )}
                   {tech.name}

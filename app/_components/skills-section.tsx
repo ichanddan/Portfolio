@@ -8,6 +8,13 @@ import SectionHeading from "./section-heading";
 
 const skillCategories = [
   {
+    name: "Programming Languages",
+    skills: [
+      { name: "JavaScript", logo: "/logos/javascript.svg" },
+      { name: "Python", logo: "/logos/python.svg" },
+    ],
+  },
+  {
     name: "Frontend",
     skills: [
       { name: "React.js", logo: "/logos/react.svg" },
@@ -15,6 +22,7 @@ const skillCategories = [
       { name: "TypeScript", logo: "/logos/typescript.svg" },
       { name: "Tailwind CSS", logo: "/logos/tailwind.svg" },
       { name: "Redux Toolkit", logo: "/logos/react.svg" },
+      { name: "Better Auth", logo: "/logos/better-auth.png" },
     ],
   },
   {
@@ -25,7 +33,6 @@ const skillCategories = [
       { name: "FastAPI", logo: "/logos/fastapi.svg" },
       { name: "Prisma ORM", logo: "/logos/prisma.svg" },
       { name: "WebSocket", logo: "/logos/websocket.svg" },
-      { name: "Better Auth", logo: "/logos/better-auth.png" },
       { name: "JWT Auth", logo: null },
     ],
   },

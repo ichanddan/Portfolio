@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import Link from "next/link"
-import Image from "next/image"
-import { ExternalLink } from "lucide-react"
-import { motion } from "framer-motion"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import Image from "next/image";
+import { ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface ProjectCardProps {
-  title: string
-  description: string
-  link?: string
-  technologies: string[]
-  organization?: string
-  index?: number
+  title: string;
+  description: string;
+  link?: string;
+  technologies: string[];
+  organization?: string;
+  index?: number;
 }
 
 const techLogos: { [key: string]: string } = {
@@ -24,8 +24,8 @@ const techLogos: { [key: string]: string } = {
   Vercel: "/logos/vercel.svg",
   React: "/logos/react.svg",
   "React Native": "/logos/react.svg",
-  "Node": "/logos/nodejs.svg",
-  "Express": "/logos/express.svg",
+  Node: "/logos/nodejs.svg",
+  Express: "/logos/express.svg",
   "Prisma ORM": "/logos/prisma.svg",
   "Sequelize ORM": "/logos/sequelize.svg",
   PostgreSQL: "/logos/postgresql.svg",
@@ -33,13 +33,13 @@ const techLogos: { [key: string]: string } = {
   "Ant Design": "/logos/antd.svg",
   "shadcn/ui": "/logos/shadcn.svg",
   "Shadcn UI": "/logos/shadcn.svg",
-  "WebSocket": "/logos/javascript.svg",
+  WebSocket: "/logos/javascript.svg",
   Python: "/logos/python.svg",
   Django: "/logos/django.svg",
   OpenAI: "/logos/OpenAI_Logo.svg",
   Langchain: "/logos/langchain-logo.svg",
   "API Integration": "/logos/api.svg",
-}
+};
 
 export default function ProjectCard({
   title,
@@ -102,5 +102,5 @@ export default function ProjectCard({
         </CardContent>
       </Card>
     </motion.div>
-  )
+  );
 }

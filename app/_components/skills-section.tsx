@@ -25,6 +25,7 @@ const skillCategories = [
       { name: "FastAPI", logo: "/logos/fastapi.svg" },
       { name: "Prisma ORM", logo: "/logos/prisma.svg" },
       { name: "WebSocket", logo: "/logos/websocket.svg" },
+      { name: "Better Auth", logo: "/logos/better-auth.png" },
       { name: "JWT Auth", logo: null },
     ],
   },

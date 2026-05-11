@@ -17,11 +17,11 @@ const skillCategories = [
   {
     name: "Frontend",
     skills: [
-      { name: "React.js", logo: "/logos/react.svg", invert: false },
+      { name: "React.js", logo: "/logos/react.svg", invert: true },
       { name: "Next.js", logo: "/logos/nextjs.svg", invert: true },
       { name: "TypeScript", logo: "/logos/typescript.svg", invert: false },
       { name: "Tailwind CSS", logo: "/logos/tailwind.svg", invert: false },
-      { name: "Redux Toolkit", logo: "/logos/react.svg", invert: false },
+      { name: "Redux Toolkit", logo: "/logos/react.svg", invert: true },
       { name: "Better Auth", logo: "/logos/better-auth.png", invert: true },
     ],
   },
@@ -42,21 +42,21 @@ const skillCategories = [
       { name: "MongoDB", logo: "/logos/mongodb.svg", invert: false },
       { name: "PostgreSQL", logo: "/logos/postgresql.svg", invert: false },
       { name: "MySQL", logo: "/logos/mysql.svg", invert: false },
-      { name: "Redis", logo: "/logos/redis.svg", invert: false },
+      { name: "Redis", logo: "/logos/redis.svg", invert: true },
       { name: "Mongoose", logo: "/logos/mongodb.svg", invert: false },
     ],
   },
   {
     name: "Mobile",
     skills: [
-      { name: "React Native", logo: "/logos/react.svg", invert: false },
+      { name: "React Native", logo: "/logos/react.svg", invert: true },
       { name: "Expo", logo: "/logos/expo.svg", invert: true },
     ],
   },
   {
     name: "AI & Cloud",
     skills: [
-      { name: "Azure OpenAI", logo: "/logos/azure.svg", invert: false },
+      { name: "Azure OpenAI", logo: "/logos/azure.svg", invert: true },
       { name: "Google Gemini", logo: "/logos/Google_Gemini_logo.svg", invert: false },
       { name: "OpenAI", logo: "/logos/OpenAI_Logo.svg", invert: true },
       { name: "Python", logo: "/logos/python.svg", invert: false },

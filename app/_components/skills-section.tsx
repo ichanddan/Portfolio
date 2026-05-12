@@ -44,7 +44,6 @@ const skillCategories = [
       { name: "PostgreSQL", logo: "/logos/postgresql.svg", invert: false },
       { name: "MySQL", logo: "/logos/mysql.svg", invert: false },
       { name: "Redis", logo: "/logos/redis.svg", invert: true },
-      { name: "Mongoose", logo: "/logos/mongodb.svg", invert: false },
     ],
   },
   {

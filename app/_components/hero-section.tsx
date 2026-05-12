@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -102,43 +103,58 @@ export default function HeroSection() {
                 Native. Focused on clean architecture, performant UIs, and collaborative agile
                 delivery.
               </motion.p>
-              <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
-                <Button asChild variant="outline">
-                  <Link href="https://github.com/ichanddan" target="_blank">
-                    <Github className="mr-2 h-4 w-4" />
-                    GitHub
-                  </Link>
-                </Button>
-                <Button asChild variant="outline">
-                  <Link href="https://www.linkedin.com/in/ichanddan" target="_blank">
-                    <Linkedin className="mr-2 h-4 w-4" />
-                    LinkedIn
-                  </Link>
-                </Button>
-                <Button asChild variant="outline">
-                  <Link href="mailto:code.us.cm@gmail.com">
-                    <Mail className="mr-2 h-4 w-4" />
-                    Email
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  className="bg-gradient-to-r from-indigo-600 to-cyan-500 text-white hover:opacity-90 border-0"
-                >
-                  <Link href="/Chandan_Kumar_Maurya_Resume.pdf" target="_blank" download>
-                    Download CV
-                  </Link>
-                </Button>
+              <motion.div variants={fadeUp} className="flex items-center gap-2">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button asChild variant="ghost" size="icon" className="rounded-full hover:bg-indigo-50 dark:hover:bg-indigo-950/50 hover:text-indigo-600 dark:hover:text-indigo-400">
+                      <Link href="https://github.com/ichanddan" target="_blank">
+                        <Github className="h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>GitHub</TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button asChild variant="ghost" size="icon" className="rounded-full hover:bg-indigo-50 dark:hover:bg-indigo-950/50 hover:text-indigo-600 dark:hover:text-indigo-400">
+                      <Link href="https://www.linkedin.com/in/ichanddan" target="_blank">
+                        <Linkedin className="h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>LinkedIn</TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button asChild variant="ghost" size="icon" className="rounded-full hover:bg-indigo-50 dark:hover:bg-indigo-950/50 hover:text-indigo-600 dark:hover:text-indigo-400">
+                      <Link href="mailto:code.us.cm@gmail.com">
+                        <Mail className="h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>code.us.cm@gmail.com</TooltipContent>
+                </Tooltip>
+                <div className="w-px h-6 bg-border mx-1" />
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button asChild variant="ghost" size="icon" className="rounded-full hover:bg-indigo-50 dark:hover:bg-indigo-950/50 hover:text-indigo-600 dark:hover:text-indigo-400">
+                      <Link href="/Chandan_Kumar_Maurya_Resume.pdf" target="_blank" download>
+                        <Download className="h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>Download CV</TooltipContent>
+                </Tooltip>
               </motion.div>
             </div>
 
             <motion.div variants={fadeUp} className="shrink-0 self-center md:self-start mt-2">
-              <div className="relative w-40 h-40">
+              <div className="relative w-52 h-52">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-600 to-cyan-500 p-[3px]">
                   <div className="w-full h-full rounded-full bg-background" />
                 </div>
                 <Image
-                  src="https://avatars.githubusercontent.com/u/131549483?v=4"
+                  src="/portfoli-image.png"
                   alt="Chandan Kumar Maurya"
                   fill
                   className="rounded-full object-cover p-[3px]"

@@ -32,7 +32,7 @@ const education = [
     degree: "O Level Certification",
     field: "Computer Software & Media Applications",
     period: "2021 – 2023",
-    grade: "Grade: A+",
+    grade: "Grade: C+",
     description: [
       "Completed government-certified IT program covering programming, networking, and web development.",
       "Maintained excellent academic performance throughout the program.",

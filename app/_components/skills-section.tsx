@@ -32,6 +32,7 @@ const skillCategories = [
       { name: "Express.js", logo: "/logos/express.svg", invert: true },
       { name: "FastAPI", logo: "/logos/fastapi.svg", invert: false },
       { name: "Prisma ORM", logo: "/logos/prisma.svg", invert: true },
+      { name: "Drizzle ORM", logo: "/logos/drizzle.svg", invert: true },
       { name: "WebSocket", logo: "/logos/websocket.svg", invert: true },
       { name: "JWT Auth", logo: null, invert: false },
     ],
@@ -77,7 +78,6 @@ const skillCategories = [
       { name: "Vercel", logo: "/logos/vercel.svg", invert: true },
       { name: "Postman", logo: "/logos/postman.svg", invert: false },
       { name: "Figma", logo: "/logos/figma.svg", invert: false },
-      { name: "JIRA", logo: "/logos/jira.svg", invert: false },
     ],
   },
 ];

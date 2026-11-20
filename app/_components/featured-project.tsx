@@ -13,9 +13,6 @@ export default function FeaturedProject() {
               <span className="text-xs font-semibold bg-gradient-to-r from-indigo-600 to-cyan-500 text-white px-3 py-1 rounded-full">
                 ✦ Featured
               </span>
-              <span className="text-xs font-medium text-muted-foreground bg-secondary px-3 py-1 rounded-full">
-                Currently Building
-              </span>
             </div>
 
             <div className="flex items-start justify-between gap-4 mb-3">
@@ -76,7 +73,7 @@ export default function FeaturedProject() {
               <span className="bg-gradient-to-r from-indigo-600 to-cyan-500 bg-clip-text text-transparent font-semibold">
                 Aiqwip Technology Pvt. Ltd.
               </span>
-              {" · "}December 2025 – Present
+              {" · "}December 2024 – Present
             </p>
           </div>
         </div>

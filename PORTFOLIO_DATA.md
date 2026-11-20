@@ -4,7 +4,7 @@
 
 - **Name:** Chandan Kumar Maurya
 - **Title:** Software Engineer · Full Stack Developer
-- **Experience:** 2+ years
+- **Experience:** 3+ years
 - **Projects Shipped:** 8+
 - **Email:** code.us.cm@gmail.com
 - **GitHub:** https://github.com/ichanddan
@@ -12,7 +12,7 @@
 - **Resume:** /Chandan_Kumar_Maurya_Resume.pdf
 
 **Bio:**
-Results-driven Software Engineer with 2+ years of experience building scalable web and mobile applications using the MERN stack, TypeScript, Next.js, and React Native. Focused on clean architecture, performant UIs, and collaborative agile delivery.
+Results-driven Software Engineer with 3+ years of experience building scalable web and mobile applications using the MERN stack, TypeScript, Next.js, and React Native. Focused on clean architecture, performant UIs, and collaborative agile delivery.
 
 ---
 
@@ -72,7 +72,7 @@ Results-driven Software Engineer with 2+ years of experience building scalable w
 
 ### Aiqwip Technology Pvt. Ltd. · Bangalore, India
 
-**Software Engineer** — December 2025 – Present
+**Software Engineer** — December 2024 – Present
 
 - Design, develop, and maintain scalable full-stack web applications using Next.js, TypeScript, and Python/FastAPI, contributing to the company's core product roadmap.
 - Build secure RESTful APIs and backend services with FastAPI integrated with PostgreSQL and Redis, ensuring high availability, data integrity, and optimal query performance.
@@ -83,7 +83,7 @@ Results-driven Software Engineer with 2+ years of experience building scalable w
 
 ### Aasa Technology · Remote
 
-**Junior Full Stack Developer** — January 2025 – December 2025
+**Junior Full Stack Developer** — January 2024 – December 2024
 
 - Designed and implemented secure, scalable RESTful APIs using Node.js and Express.js, enabling seamless frontend-backend communication across the platform.
 - Developed reusable, performant UI components with React.js and TypeScript, cutting component development time by ~30% and ensuring consistent design system adoption.
@@ -94,13 +94,13 @@ Results-driven Software Engineer with 2+ years of experience building scalable w
 
 ### Daps Software · Remote
 
-**Frontend Developer** — May 2024 – January 2025
+**Frontend Developer** — May 2023 – January 2024
 
 - Developed and maintained production-grade UI components using React.js and JavaScript.
 - Integrated third-party REST APIs and auth services (JWT, OAuth) to expand product capabilities and shorten feature delivery cycles.
 - Partnered with backend engineers to ensure seamless frontend-backend communication and end-to-end data integrity.
 
-**Frontend Developer Intern** — February 2024 – May 2024
+**Frontend Developer Intern** — February 2023 – May 2023
 
 - Translated Figma wireframes into pixel-perfect, production-grade interfaces using HTML5, CSS3, and JavaScript.
 - Built fully responsive, cross-browser UIs optimized for mobile, tablet, and desktop, reaching a Lighthouse accessibility score of 90+.
@@ -140,9 +140,9 @@ Results-driven Software Engineer with 2+ years of experience building scalable w
 ## Featured Project
 
 ### Imeld AI ✦
-**Aiqwip Technology Pvt. Ltd.** · December 2025 – Present
+**Aiqwip Technology Pvt. Ltd.** · December 2024 – Present
 **URL:** https://www.imeld.ai/
-**Status:** Currently Building · VAPT Passed · SOC2 Certification In Progress
+**Status:** VAPT Passed · SOC2 Certification In Progress
 
 Enterprise AI platform integrating Azure OpenAI, Google Gemini, and Anam.ai with a real-time WebSocket backend and a Python/FastAPI service layer. Joined as Frontend Developer and transitioned to Full Stack ownership — responsible for UI, backend APIs, and PostgreSQL data architecture.
 
@@ -160,23 +160,26 @@ Full-stack esports wiki platform covering Indian gaming — player profiles, tea
 
 ---
 
-### Dummy API
-**URL:** https://dmy-api.vercel.app/
-**Technologies:** TypeScript, Next.js, MongoDB, Tailwind
+### BlinkGo
+**Technologies:** Next.js, PostgreSQL, PostGIS, Drizzle ORM, React Native (via Expo), Tailwind CSS
 
-Customizable dummy API platform — sign up, create projects, define endpoints, configure response data, and test seamlessly all in one place.
-
----
-
-### URL Shortener
-**URL:** https://ijkl.vercel.app/
-**Technologies:** TypeScript, Next.js, Vercel, Tailwind
-
-Modern URL shortener that lets users create concise, shareable links. Built with performance and user experience in mind.
+- Developed the main customer-facing mobile application and shopkeeper management application using React Native and Expo.
+- Engineered a comprehensive Admin CRM dashboard using Next.js for platform oversight, inventory management, and analytics.
+- Built the robust backend using Next.js Route Handlers integrated with Drizzle ORM and PostgreSQL.
+- Implemented authentication, cart workflows, and real-time inventory management across the ecosystem.
 
 ---
 
 ## Organizational Projects
+
+### Imeld AI
+**Organization:** Aiqwip Technology Pvt. Ltd.
+**URL:** https://www.imeld.ai/
+**Technologies:** Next.js, Python, FastAPI, PostgreSQL, Redis, WebSocket, Azure OpenAI, Google Gemini, Anam.ai
+
+Enterprise AI platform integrating Azure OpenAI, Google Gemini, and Anam.ai with a real-time WebSocket backend and a Python/FastAPI service layer. Joined as Frontend Developer and transitioned to Full Stack ownership — responsible for UI, backend APIs, and PostgreSQL data architecture.
+
+---
 
 ### School Spares
 **Organization:** Aasa Technology

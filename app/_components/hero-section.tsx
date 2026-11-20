@@ -98,7 +98,7 @@ export default function HeroSection() {
                 variants={fadeUp}
                 className="text-base text-muted-foreground mb-6 max-w-[480px] leading-relaxed"
               >
-                Results-driven Software Engineer with 2+ years of experience building scalable
+                Results-driven Software Engineer with 3+ years of experience building scalable
                 web and mobile applications using the MERN stack, TypeScript, Next.js, and React
                 Native. Focused on clean architecture, performant UIs, and collaborative agile
                 delivery.
@@ -165,7 +165,7 @@ export default function HeroSection() {
 
           <motion.div variants={fadeUp} className="flex flex-wrap gap-8 pt-6 border-t">
             {[
-              { end: 2, suffix: "+", label: "Years experience" },
+              { end: 3, suffix: "+", label: "Years experience" },
               { end: 8, suffix: "+", label: "Projects shipped" },
             ].map((stat) => (
               <div key={stat.label}>

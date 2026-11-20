@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Chandan Kumar Maurya — Software Engineer",
   description:
-    "Portfolio of Chandan Kumar Maurya, a Software Engineer with 2+ years of experience in full-stack development using MERN stack, Next.js, TypeScript, and React Native.",
+    "Portfolio of Chandan Kumar Maurya, a Software Engineer with 3+ years of experience in full-stack development using MERN stack, Next.js, TypeScript, and React Native.",
 }
 
 export default function RootLayout({

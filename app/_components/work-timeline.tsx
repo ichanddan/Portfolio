@@ -10,7 +10,7 @@ const experiences = [
     roles: [
       {
         title: "Software Engineer",
-        period: "December 2025 – Present",
+        period: "December 2024 – Present",
         description: [
           "Design, develop, and maintain scalable full-stack web applications using Next.js, TypeScript, and Python/FastAPI, contributing to the company's core product roadmap.",
           "Build secure RESTful APIs and backend services with FastAPI integrated with PostgreSQL and Redis, ensuring high availability, data integrity, and optimal query performance.",
@@ -26,7 +26,7 @@ const experiences = [
     roles: [
       {
         title: "Junior Full Stack Developer",
-        period: "January 2025 – December 2025",
+        period: "January 2024 – December 2024",
         description: [
           "Designed and implemented secure, scalable RESTful APIs using Node.js and Express.js, enabling seamless frontend-backend communication across the platform.",
           "Developed reusable, performant UI components with React.js and TypeScript, cutting component development time by ~30% and ensuring consistent design system adoption.",
@@ -42,7 +42,7 @@ const experiences = [
     roles: [
       {
         title: "Frontend Developer",
-        period: "May 2024 – January 2025",
+        period: "May 2023 – January 2024",
         description: [
           "Developed and maintained production-grade UI components using React.js and JavaScript.",
           "Integrated third-party REST APIs and auth services (JWT, OAuth) to expand product capabilities and shorten feature delivery cycles.",
@@ -51,7 +51,7 @@ const experiences = [
       },
       {
         title: "Frontend Developer Intern",
-        period: "February 2024 – May 2024",
+        period: "February 2023 – May 2023",
         description: [
           "Translated Figma wireframes into pixel-perfect, production-grade interfaces using HTML5, CSS3, and JavaScript.",
           "Built fully responsive, cross-browser UIs optimized for mobile, tablet, and desktop, reaching a Lighthouse accessibility score of 90+.",
